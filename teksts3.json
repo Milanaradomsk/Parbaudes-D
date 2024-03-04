@@ -1,0 +1,8 @@
+{
+    "skolas piederumi": [
+        {"piederumi":  "pilcpalvas" , "daudzums": 5},
+        {"piederumi":  "zīmuļi" , "daudzums": 4},
+        {"piederumi":  "līme " , "daudzums": 2},
+        {"piederumi": "flomosteri" , "daudzums":5}
+    ]
+}

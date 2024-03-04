@@ -1,0 +1,29 @@
+import json
+
+def galvena_funkcija(): 
+    try:
+        with open("teksts3.json","r", encoding="utf8") as ff:
+            data=json.load(ff)
+            print(data) 
+            visa_vārdnīca=dict(data)
+            print(f"pilcpalvas   {len(visa_vārdnīca)}")
+            print("zīmuļi:")
+            for atls in visa_vārdnīca.keys():
+               print(atls)
+            print(f"līme")
+            for aa in visa_vārdnīca.values():
+               print(aa)
+            ievads_atslēga=input(f"flomosteri: ")
+            if ievads_atslēga in visa_vārdnīca:
+               print(f"{ievads_atslēga}:{visa_vārdnīca[ievads_atslēga]}")
+            else:
+               print(f"Atslēga{ievads_atslēga} nav atrasta vardnīca!")
+                    
+
+    except FileNotFoundError:
+     print("datne nav atrasta!")
+    except json.JSONDecodeError:
+     print("datne nav JSON formats!")
+
+if __name__=="__main__":
+   galvena_funkcija()
